@@ -36,8 +36,8 @@ if (!empty($_POST['id_vehicule'] && !empty($_POST['id_conducteur']))) { // contr
     // Gérer les redirections
         if ($result) {
             
-         header("Location: ../conducteurs.php");
+         header("Location: ../associations.php");
         }
       } else {
-      header("Location: ../conducteurs.php");
+      header("Location: ../associations.php");
 }

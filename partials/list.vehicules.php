@@ -1,8 +1,7 @@
 
+<h1 class="my-5 text-center bg-primary p-4">Liste des véhicules</h1>
 
-<h1 liste des véhicules /h1>
-
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>id_véhicules</th>
@@ -24,19 +23,19 @@
             <td><?= $vehicule["couleur"]?></td>
             <td><?= $vehicule["immatriculation"]?></td>
 
-
-            <form action="partials/modify.vehicule.php" method="post" >
-                    <input hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
-                    <button class="" type="submit"><i class="fa fa-edit"> </i> 
-                    </button>
-            </form>
+            <td>
+                <form action="partials/modify.vehicule.php" method="post" >
+                        <input hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
+                        <button class="" type="submit"><i class="fa fa-edit"> </i> 
+                        </button>
+                </form>
             </td>
             <td>
-            <form action="controller/delete.vehicule.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $vehicule['id_vehicule'] ?>')">
-                    <input hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
-                    <button class="" type="submit"><i class="fa fa-trash"> </i> 
-                    </button>
-            </form>
+                <form action="controller/delete.vehicule.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $vehicule['id_vehicule'] ?>')">
+                        <input hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
+                        <button class="" type="submit"><i class="fa fa-trash"> </i> 
+                        </button>
+                </form>
             </td>
 
         </tr>

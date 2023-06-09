@@ -1,12 +1,8 @@
 <?php
 require_once "../controller/database.php";
 
-
-
-// charger les valeurs pre existante pour l'id récupérer
+// charger les valeurs pre existantes via 'id récupérer
 $idModif = $_POST["id"];
-
-echo var_dump($_POST["id"]);
 
 // preparer la requete 
 $req = $db->prepare("SELECT * FROM conducteur WHERE id_conducteur=:idModif");
@@ -21,12 +17,6 @@ $req = $db->prepare("SELECT * FROM conducteur WHERE id_conducteur=:idModif");
     $req->closeCursor();
 ?>
 
-<?php // TODO : faire afficher les valeurs dans le fomulaire  ?
-echo var_dump($Modif);
-?>
-
-
-
 
 <h1 class="my-5 text-center bg-primary p-4">modifier un conducteur</h1>.
 
@@ -40,11 +30,11 @@ echo var_dump($Modif);
     <input type="text" class=" my-3 form-control" id="NO" name="nom" value="<?=$Modif[0]["nom"]?>">
 
 
-    <input type="number" class=" my-3 form-control" id="PR" name="id_conducteur" value="<?= $idModif ?>" hidden >
+    <input type="number" class=" my-3 form-control" id="PR" name="id_conducteur" value="<?= $Modif[0]["id_conducteur"] ?>" hidden >
 
 
     <button class="btn btn-success shadow m-auto" type="submit">
-        Modifier ce conducteur</a>
+        Mettre à jour </a>
     </button>
 
 </form>

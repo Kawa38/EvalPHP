@@ -1,12 +1,13 @@
 <?php
 // accés à la base de donnée
 require_once "database.php";
-    //echo var_dump($_POST['id']);
+// echo var_dump($_POST);
 
 // test  $_POST[id] non null 
 if(!empty($_POST['id']))
 {
-    // préparation de la requete 
+  echo "test"; 
+  // préparation de la requete 
     $req = $db->prepare("DELETE FROM association_vehicule_conducteur WHERE id_association = :id_association");
 
     // Assignation de la valeur 
@@ -22,7 +23,7 @@ if(!empty($_POST['id']))
 // Gérer les redirections
 
 if ($result) {
-   header("Location: ../associations.php");}
+  header("Location: ../associations.php");}
 } else {
   header("Location: ../associations.php");
 }

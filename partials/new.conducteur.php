@@ -1,4 +1,4 @@
-<h1 class="my-5 text-center bg-primary p-4">Rajouter un conducteur</h1>.
+<h1 class="my-5 text-center bg-primary p-4">Ajouter un conducteur</h1>
 
 <form action="./controller/create.conducteur.php" method="post">
 
