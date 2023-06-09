@@ -2,6 +2,7 @@
 require_once "database.php";
 
 // test  $_POST[id] non null 
+echo var_dump($_POST);
 if(!empty($_POST['id_conducteur']))
 {  
     // préparation de la requete 
@@ -22,7 +23,7 @@ if(!empty($_POST['id_conducteur']))
     // Cloture 
         $req->closeCursor();
 
-    // Gérer les redirections
+// Gérer les redirections
             if ($result) {
             header("Location: ../associations.php");
             }

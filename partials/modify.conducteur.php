@@ -1,4 +1,9 @@
 <?php
+//Affichage entête
+require_once "header.php";
+?>
+
+<?php
 require_once "../controller/database.php";
 
 // charger les valeurs pre existantes via 'id récupérer
@@ -18,19 +23,19 @@ $req = $db->prepare("SELECT * FROM conducteur WHERE id_conducteur=:idModif");
 ?>
 
 
-<h1 class="my-5 text-center bg-primary p-4">modifier un conducteur</h1>.
 
+<section class="col col border border-primary-subtle m-3 rounded" >
 <form action="../controller/update.conducteur.php" method="post">
 
-    <label for="PR" class="form-label">Prenom</label>
-    <input type="text" class=" my-3 form-control" id="PR" name="prenom" value="<?=$Modif[0]["prenom"]?>">
+    <label class="form-label" for="PR" class="form-label">Prenom</label>
+    <input class="form-control" type="text" class=" my-3 form-control" id="PR" name="prenom" value="<?=$Modif[0]["prenom"]?>">
 
 
-    <label for="NO" class="form-label">Nom</label>
-    <input type="text" class=" my-3 form-control" id="NO" name="nom" value="<?=$Modif[0]["nom"]?>">
+    <label class="form-label" for="NO" class="form-label">Nom</label>
+    <input class="form-control" type="text" class=" my-3 form-control" id="NO" name="nom" value="<?=$Modif[0]["nom"]?>">
 
 
-    <input type="number" class=" my-3 form-control" id="PR" name="id_conducteur" value="<?= $Modif[0]["id_conducteur"] ?>" hidden >
+    <input class="form-control" type="number" class=" my-3 form-control" id="PR" name="id_conducteur" value="<?= $Modif[0]["id_conducteur"] ?>" hidden >
 
 
     <button class="btn btn-success shadow m-auto" type="submit">
@@ -38,3 +43,4 @@ $req = $db->prepare("SELECT * FROM conducteur WHERE id_conducteur=:idModif");
     </button>
 
 </form>
+</section>

@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <nav class="navbar navbar-expand navbar-light bg-primary  fixed-top ">
     
             <a href="index.php" class="navbar-brand text-danger">Base de données conducteurs</a>
         

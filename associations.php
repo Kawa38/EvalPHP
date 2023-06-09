@@ -8,11 +8,15 @@ require_once "./controller/read.associations.php";
 
 
 //affichage liste
+echo '<h2> liste des associations </h2>';
 require_once "./partials/list.associations.php" ;
 
 
 //affichage formulaire
-require_once "./partials/new.association.php" 
+echo '<h2>Ajouter une association</h2>';
+require_once "./partials/new.association.php"; 
 
+// affichage footer
+require_once "./partials/footer.php"
 ?>
 

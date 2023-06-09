@@ -1,9 +1,9 @@
 
 
-<h1 class="my-5 text-center bg-primary p-4">Liste des conducteurs</h1>
 
+<section class= "border border-primary-subtle m-3 rounded">
 <table>
-    <table class="table">
+    <table class="table table-hover">
     <thead class="thead-light">
         <tr>
             <th>id_conducteur</th>
@@ -21,20 +21,20 @@
                 <td><?= $conducteur["prenom"] ?></td>
                 <td>
                     <form action="partials/modify.conducteur.php" method="post" >
-                            <input hidden type="text" name="id" value="<?= $conducteur['id_conducteur'] ?> ">
+                            <input class="form-control" hidden type="text" name="id" value="<?= $conducteur['id_conducteur'] ?> ">
                             <button class="" type="submit"><i class="fa fa-edit"> </i> 
                             </button>
                     </form>
                 </td>
                 <td>
                     <form action="controller/delete.conducteur.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $conducteur['id_conducteur'] ?>')">
-                            <input hidden type="text" name="id" value="<?= $conducteur['id_conducteur'] ?> ">
+                            <input class="form-control" hidden type="text" name="id" value="<?= $conducteur['id_conducteur'] ?> ">
                             <button class="" type="submit"><i class="fa fa-trash"> </i> 
                             </button>
                     </form>
                 </td>
             </tr>
             <?php endforeach ?>
-        </table>
     <tbody>
 </table>
+</section>

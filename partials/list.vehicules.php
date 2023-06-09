@@ -1,8 +1,8 @@
 
-<h1 class="my-5 text-center bg-primary p-4">Liste des véhicules</h1>
 
-<table class="table">
-    <thead>
+<section class= "border border-primary-subtle m-3 rounded">
+<table class="table table-hover">
+    <thead class="thead-light">
         <tr>
             <th>id_véhicules</th>
             <th>Marques</th>
@@ -25,14 +25,14 @@
 
             <td>
                 <form action="partials/modify.vehicule.php" method="post" >
-                        <input hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
+                        <input class="form-control" hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
                         <button class="" type="submit"><i class="fa fa-edit"> </i> 
                         </button>
                 </form>
             </td>
             <td>
                 <form action="controller/delete.vehicule.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $vehicule['id_vehicule'] ?>')">
-                        <input hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
+                        <input class="form-control" hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
                         <button class="" type="submit"><i class="fa fa-trash"> </i> 
                         </button>
                 </form>
@@ -42,3 +42,4 @@
         <?php endforeach ?>
     <tbody>
 </table>
+    </section>
