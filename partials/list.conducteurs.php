@@ -27,7 +27,7 @@
                     </form>
                 </td>
                 <td>
-                    <form action="controller/delete.conducteur.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $conducteur['id_conducteur'] ?>')">
+                    <form action="controller/delete.conducteur.php" method="post" onSubmit="return confirm('confirmez la suppression ?')">
                             <input class="form-control" hidden type="text" name="id" value="<?= $conducteur['id_conducteur'] ?> ">
                             <button class="" type="submit"><i class="fa fa-trash"> </i> 
                             </button>

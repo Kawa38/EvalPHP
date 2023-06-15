@@ -41,9 +41,9 @@
             <tr>
                 <td><?= $association["id_association"]?></td>
 
-                <td><?php echo  isset($vehicule[0]["marque"])? $association["id_vehicule"]." ". $vehicule[0]["marque"]." ". $vehicule[0]["modele"]: $association["id_vehicule"]." : "."Véhicule effacé"  ?> </td>
+                <td><?php echo  isset($vehicule[0]["marque"])? $association["id_vehicule"]." / ". $vehicule[0]["marque"]." ". $vehicule[0]["modele"]: $association["id_vehicule"]." : "."Véhicule effacé"  ?> </td>
 
-                <td><?php echo  isset($conducteur[0]["nom"])? $association["id_conducteur"]." ". $conducteur[0]["nom"]." ". $conducteur[0]["prenom"]: $association["id_conducteur"]." : "."conducteur effacé"  ?> </td>
+                <td><?php echo  isset($conducteur[0]["nom"])? $association["id_conducteur"]." / ". $conducteur[0]["nom"]." ". $conducteur[0]["prenom"]: $association["id_conducteur"]." : "."conducteur effacé"  ?> </td>
                 
                 <td>
                     <form action="partials/modify.association.php" method="post" >
@@ -53,7 +53,7 @@
                     </form>
                 </td>
                 <td>
-                    <form action="controller/delete.association.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $association['id_association'] ?>')">
+                <form action="controller/delete.association.php" method="post" onSubmit="return confirm('confirmez la suppression ? ')">
                             <input class="form-control" hidden type="text" name="id" value="<?= $association['id_association'] ?> ">
                             <button class="" type="submit"><i class="fa fa-trash"> </i> 
                             </button>

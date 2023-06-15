@@ -35,23 +35,26 @@ require_once "../Controller/read.vehicules.php";
 <form action="../controller/update.association.php" method="post">
 
 
-<label class="form-label" for="IDC" class="form-label"> le conducteur</label>
-    <select id="IDC" name="id_conducteur"  >
-        <option selected="selected"> <?= $Modif[0]["id_conducteur"] ?></option>
-        <?php foreach ($conducteurs as $key => $conducteur): ?>
-            <option value="<?= $conducteur["id_conducteur"] ?>"> <?= $conducteur["id_conducteur"] ." ".$conducteur["nom"] ." ".$conducteur["prenom"] ?> </option>
-        <?php endforeach; ?>
-    </select>
 
-    <br>
-
-    <label class="form-label" for="IDV" class="form-label"> le véhicule </label>
+<label class="form-label" for="IDV" class="form-label"> le véhicule </label>
     <select id="IDV" name="id_vehicule" >
         <option selected="selected" ><?= $Modif[0]["id_vehicule"] ?></option>
         <?php foreach ($vehicules as $key => $vehicule): ?>
             <option value="<?= $vehicule["id_vehicule"] ?>"> <?= $vehicule["id_vehicule"] ." ".$vehicule["marque"] ." ".$vehicule["modele"] ?> </option>
         <?php endforeach; ?>
     </select>
+    <br>
+
+    <label class="form-label" for="IDC" class="form-label"> le conducteur</label>
+    <select id="IDC" name="id_conducteur"  >
+        <option selected="selected"> <?= $Modif[0]["id_conducteur"] ?></option>
+        <?php foreach ($conducteurs as $key => $conducteur): ?>
+            <option value="<?= $conducteur["id_conducteur"] ?>"> <?= $conducteur["id_conducteur"] ." ".$conducteur["nom"] ." ".$conducteur["prenom"] ?> </option>
+        <?php endforeach; ?>
+    </select>
+    <br>
+
+
 
     <br>
 

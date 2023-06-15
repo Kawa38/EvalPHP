@@ -10,7 +10,7 @@ if(!empty($_POST['id_conducteur']))
 {  
 echo "<h1> test </h1>";
 // préparation de la requete 
-$req = $db->prepare("UPDATE conducteur SET nom=:nom, prenom=:prenon  WHERE id_conducteur=:idModif");
+$req = $db->prepare("UPDATE conducteur SET nom=:nom, prenom=:prenom  WHERE id_conducteur=:idModif");
 
 // Assignation de la valeur 
     $idModif = intval($_POST['id_conducteur']);

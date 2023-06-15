@@ -25,7 +25,7 @@ require_once "./Controller/tableaubord.php";
     </div>
 
     <div class= "col border border-primary-subtle m-3 rounded">
-        <h5>Nombre d'association</h5>
+        <h5>Nombre d'associations</h5>
         <p>
         <?= count($associations) ?>
         </p>

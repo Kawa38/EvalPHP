@@ -31,7 +31,7 @@
                 </form>
             </td>
             <td>
-                <form action="controller/delete.vehicule.php" method="post" onSubmit="return confirm('confirmez la suppression de l'id : <?= $vehicule['id_vehicule'] ?>')">
+                <form action="controller/delete.vehicule.php" method="post" onSubmit="return confirm('confirmez la suppression ')">
                         <input class="form-control" hidden type="text" name="id" value="<?= $vehicule['id_vehicule'] ?> ">
                         <button class="" type="submit"><i class="fa fa-trash"> </i> 
                         </button>
